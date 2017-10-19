@@ -12,7 +12,7 @@ Oracle PLSQL QR code generator / Java stored procedure
 
 
 # How to use
-To get some QR code from specified text please run:
+To get some QR code from text type:
 
 select getQRcode('Some text') from dual
 
