@@ -35,3 +35,5 @@ begin
   qrCode := getQRCode('some text');
 end;
 ```
+
+The database function can be used also in oracle Reports to generate QR code
