@@ -12,7 +12,7 @@ loadjava -force -genmissing -r -user username/password@database -verbose qrgen-1
 
 2.) verify that all imported classes are valid
 
-3.) run QrCodeBean.jvs, Java stored procedure
+3.) run QrCodeBean.jvs, Java stored procedure (execute the script as a normal pl/sql script)
 
 4.) run getQrCode.sql, plsql function
 
