@@ -10,11 +10,11 @@ loadjava -force -genmissing -r -user username/password@database -verbose javase-
 loadjava -force -genmissing -r -user username/password@database -verbose qrgen-1.2.jar
 ```
 
-2.) verify that all imported classes are valid
+2.) verify that all imported classes are "valid"
 
-3.) run QrCodeBean.jvs, Java stored procedure (execute the script as a normal pl/sql script)
+3.) run (execute) the  QrCodeBean.jvs as a normal plsql package or function
 
-4.) run getQrCode.sql, plsql function
+4.) run (execute) getQrCode.sql
 
 
 # How to use
