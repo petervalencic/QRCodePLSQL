@@ -1,5 +1,5 @@
 # QRCodePLSQL
-Oracle PLSQL QR code generator / Java stored procedure 
+Oracle PLSQL QR code generator / Java stored procedure. Here it is a simple Java stored procedure that can generate a QR code in jpeg format.  
 
 # How to install
 1.) upload all jar archives in lib folder with loadjava tool to your database:
