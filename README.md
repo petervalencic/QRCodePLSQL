@@ -36,4 +36,4 @@ begin
 end;
 ```
 
-The database function can be used also in oracle Reports to generate QR code
+The database function can be also used in Oracle Reports to generate QR code
