@@ -1,27 +1,78 @@
 # QRCodePLSQL
 
-An Oracle Java Stored Procedure and PL/SQL wrapper designed to generate QR code images directly within an Oracle Database.
+Oracle PLSQL QR code generator / Java stored procedure. Here it is a simple Java stored procedure that can generate a QR code in jpeg format.  
 
----
 
-## Prerequisites
 
-* **Oracle Database** (with Oracle JVM enabled)
-* **Oracle Client / Database Tools** (`loadjava` utility)
-* **JAR Dependencies** (located in the `lib/` directory):
-  * `core-1.7.jar` (ZXing core library)
-  * `javase-1.7.jar` (ZXing JavaSE extensions)
-  * `qrgen-1.2.jar` (QRGen generator library)
+# How to install
 
----
+1.) upload all jar archives from lib folder with loadjava tool into your database:
 
-## Installation
 
-### 1. Load Java Libraries into Oracle Database
 
-Use the Oracle `loadjava` utility to import the required JAR files from the `lib/` directory into your schema:
+```
 
-```bash
 loadjava -force -genmissing -r -user username/password@database -verbose core-1.7.jar
+
 loadjava -force -genmissing -r -user username/password@database -verbose javase-1.7.jar
+
 loadjava -force -genmissing -r -user username/password@database -verbose qrgen-1.2.jar
+
+```
+
+
+
+2.) verify that all imported classes are "valid"
+
+
+
+3.) run (execute) the  QrCodeBean.jvs as a normal plsql package or function
+
+
+
+4.) run (execute) getQrCode.sql
+
+
+
+
+
+# How to use
+
+To get some QR code from text type:
+
+
+
+`select getQRCode('Some text to be present in QR code') from dual`
+
+
+
+and you get
+
+
+
+![Optional Text](qrcode.gif)
+
+
+
+or
+
+
+
+```
+
+declare
+
+  qrCode Blob;
+
+begin
+
+  qrCode := getQRCode('some text');
+
+end;
+
+```
+
+
+
+The database function can be also used in Oracle Reports to generate QR code 
+
